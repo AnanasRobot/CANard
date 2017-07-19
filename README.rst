@@ -42,11 +42,12 @@ This examples goes on bus and prints received messages:
 You will need to set the serial port (``/dev/cu.usbmodem14511`` in this example)
 correctly.
 
-This examples goes on bus and prints received messages with 8192 byte buffer:
+
 
 
 Example with buffer
 -------
+This examples goes on bus and prints received messages with 8192 byte buffer:
 pyserial 3.3 needed
 
 .. code:: python
