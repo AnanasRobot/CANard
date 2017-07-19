@@ -42,6 +42,24 @@ This examples goes on bus and prints received messages:
 You will need to set the serial port (``/dev/cu.usbmodem14511`` in this example)
 correctly.
 
+This examples goes on bus and prints received messages with 8192 byte buffer:
+.. code:: python
+
+    from canard import can
+    from canard.hw import cantact
+
+    dev = cantact.CantactDev("/dev/cu.usbmodem14511")
+
+    dev.start()
+    while True:
+        frames = dev.recv_buff(8192)
+        for data in frames:
+            count = count + 1
+            print("%d: %s" % (count, str(data)))
+
+You will need to set the serial port (``/dev/cu.usbmodem14511`` in this example)
+correctly.
+
 
 Using Peak CAN Tools
 ====================
